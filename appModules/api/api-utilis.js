@@ -12,4 +12,4 @@ function getRandomGame(array) {
     return array[randomIndex];
   } 
 
-module.exports = { getData };
+module.exports = { getData, getRandomGame };

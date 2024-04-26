@@ -1,6 +1,4 @@
 const http = require('http');
-const path = require('path');
-const fs = require('fs');
 const {
   mainRouteController,
   defaultRouteController,
@@ -28,3 +26,5 @@ const server = http.createServer((req, res) => {
             defaultRouteController(res, url);
     }
   });
+  
+server.listen(PORT);
