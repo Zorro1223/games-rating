@@ -1,6 +1,15 @@
 const fs = require("fs").promises;
-const { config } = require("process");
-const { getRandomGame } = require("../appModules/api");
+const { getRandomGame, config } = require("../appModules/api");
+const sendAllGames = (req, res) => {
+  res.send(req.games);
+};
+
+const sendUpdatedGames = (req, res) => {
+  res.send({
+    games: req.games,
+    updated: req.updatedObject
+  });
+};
 
 async function gameRouteController(res) {
   try {
@@ -15,4 +24,4 @@ async function gameRouteController(res) {
   }
 }
   
-module.exports = gameRouteController;
+module.exports = { gameRouteController, sendAllGames, sendUpdatedGames };
