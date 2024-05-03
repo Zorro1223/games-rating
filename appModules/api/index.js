@@ -1,4 +1,4 @@
-const { getData, getRandomGame } = require("./api-utilis");
+const { getData, getRandomGame} = require("./api-utilis");
 const endpoints = require("./config");
 
 module.exports = {
