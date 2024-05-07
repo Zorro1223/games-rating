@@ -14,15 +14,3 @@ function cors(req, res, next) {
 }
 
 module.exports = cors;
-app.use(
-  bodyParser.json(),
-  express.static(path.join(__dirname, 'public')),
-  mainRoute,
-  gamesRouter
-); 
-
-app.listen(PORT, () => {
-  console.log(`Server is running at PORT http://localhost:${PORT}`);
-})
-
-server.listen(PORT);

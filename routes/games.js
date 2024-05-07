@@ -8,7 +8,7 @@ const {
   findGameById,
   deleteGame
 } = require("../middlewares/games");
-const { sendAllGames, sendUpdatedGames } = require("../controllers/games");
+const { sendAllGames, sendUpadetedGames } = require("../controllers/games");
 
 gamesRouter.get("/games", getAllGames, sendAllGames);
 
@@ -18,7 +18,7 @@ gamesRouter.post(
   checkIsTitleInArray,
   updateGamesArray,
   updateGamesFile,
-  sendUpdatedGames
+  sendUpadetedGames
 );
 
 gamesRouter.delete(
@@ -27,7 +27,7 @@ gamesRouter.delete(
   findGameById,
   deleteGame,
   updateGamesFile,
-  sendUpdatedGames
+  sendUpadetedGames
 );
 
 module.exports = gamesRouter;
